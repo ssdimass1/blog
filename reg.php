@@ -60,11 +60,10 @@ if(isset ($_POST['seve']))
         $s_name = strip_tags(trim($_POST['s_name']));
         $pasword = strip_tags(trim($_POST['pasword']));
         $age = $_POST['age'];
-        $male = $_POST['male'];
-        $male2 = $_POST['male2'];
+        $gender = $_POST['gender'];
         $pasword == $pasword2;
-        $query = mysql_query("INSERT INTO form (name, s_name, pasword, male, male2, age, email)
-                               VALUES('$name', '$s_name', '$pasword', '$male', '$male2', '$age', '$email')");
+        $query = mysql_query("INSERT INTO form (name, s_name, pasword, gender, age, email)
+                               VALUES('$name', '$s_name', '$pasword', '$gender', '$age', '$email')");
         echo '!!Спасибо за регистрацию!!'; 
     } else {
         echo 'уже есть такая запись';
